@@ -1,0 +1,37 @@
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(12, INPUT);
+  pinMode(11, INPUT);
+  pinMode(10, INPUT);
+  pinMode(9, INPUT);
+
+  
+}
+
+void loop()
+{
+  bool varA, varB, varC, varD,varZ;
+  
+  varA = digitalRead(10);
+  varB = digitalRead(11);
+  varC = digitalRead(12);
+  varD = digitalRead(9);
+  
+  varZ = or2(varA, and2 (varB,varC, varD));
+  
+  digitalWrite(13, varZ);
+  
+   
+}
+
+bool or2(bool a, bool b)
+{
+
+  return a||b;
+}
+
+bool and2(bool a, bool b)
+{
+  return a && b;
+}
